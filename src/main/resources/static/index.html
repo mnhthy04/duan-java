@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Thy | Kiểu Cọ & Nghệ Thuật</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        primary: '#FF6b6b',
+                        secondary: '#4ECDC4',
+                        dark: '#2d3436',
+                        light: '#fdfbfb',
+                        nail: '#ff9ff3',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6b6b, #ff9ff3, #4ECDC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: gradientMove 4s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        .blob-1 {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .blob-2 {
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .blob-3 {
+            animation: float 10s ease-in-out infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-25px) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .hero-img-morph {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        @keyframes morph {
+
+            0%,
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+        }
+
+        .tilt-card {
+            transition: transform 0.3s ease;
+        }
+
+        .tilt-card:hover {
+            transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark font-sans antialiased overflow-x-hidden relative">
+
+    <div
+        class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-nail opacity-20 filter blur-3xl blob-1 pointer-events-none z-0">
+    </div>
+    <div
+        class="fixed bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-primary opacity-20 filter blur-3xl blob-2 pointer-events-none z-0">
+    </div>
+    <div
+        class="fixed top-[40%] right-[30%] w-[20vw] h-[20vw] rounded-full bg-secondary filter blur-3xl blob-3 pointer-events-none z-0">
+    </div>
+
+    <header class="fixed w-full top-0 z-50 glass transition-all duration-300 shadow-lg">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <a href="#"
+                class="text-4xl font-serif font-bold gradient-text tracking-widest hover:scale-105 transition-transform italic">Thy.</a>
+            <nav class="hidden md:flex space-x-10 font-medium">
+                <a href="#home" class="text-gray-800 hover:text-primary transition-colors relative group">
+                    Trang chủ
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="text-gray-800 hover:text-primary transition-colors relative group">
+                    Về Thy
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="text-gray-800 hover:text-primary transition-colors relative group">
+                    Kết nối
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                </a>
+            </nav>
+            <a href="#contact"
+                class="hidden md:block bg-gradient-to-r from-primary to-nail text-white px-8 py-3 rounded-full font-bold shadow-2xl hover:shadow-primary/50 transform hover:-translate-y-1.5 transition-all duration-300">
+                Liên hệ ngay
+            </a>
+            <div class="md:hidden text-3xl text-dark cursor-pointer hover:text-primary transition-colors">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="min-h-screen flex items-center pt-28 relative z-10 px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 space-y-8 text-center md:text-left">
+                <div class="inline-block glass px-6 py-2 rounded-full shadow-inner border border-white/50">
+                    <p class="text-primary font-semibold tracking-widest uppercase text-sm">🌻 15/11/2004</p>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-serif font-bold leading-none tracking-tight">
+                    Minh <span class="gradient-text">Thy</span>
+                </h1>
+                <h2
+                    class="text-2xl md:text-3xl font-light text-gray-700 flex items-center justify-center md:justify-start gap-4 flex-wrap">
+                    <span class="border-b-2 border-primary pb-1 font-medium">Ca hát</span>
+                    <i class="fa-solid fa-microphone text-primary text-xl animate-pulse"></i>
+                    <span class="border-b-2 border-nail pb-1 font-medium">Làm đẹp</span>
+                    <i class="fa-solid fa-sparkles text-nail text-xl animate-pulse"></i>
+                    <span class="border-b-2 border-secondary pb-1 font-medium">IT Student</span>
+                    <i class="fa-solid fa-code text-secondary text-xl opacity-50"></i>
+                </h2>
+                <p class="text-gray-600 text-xl max-w-xl mx-auto md:mx-0 leading-relaxed font-light">
+                    Một cô nàng yêu cái đẹp, đam mê những giai điệu và đang khám phá thế giới công nghệ theo cách riêng
+                    của mình.
+                </p>
+                <div class="pt-8 flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+                    <a href="#about"
+                        class="bg-dark text-white px-10 py-4 rounded-full font-bold shadow-2xl hover:bg-gray-900 transform hover:-translate-y-2 transition-all duration-300 text-lg hover:shadow-dark/40">
+                        Khám phá thêm
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center relative group">
+                <div class="relative w-80 h-80 md:w-[30rem] md:h-[30rem]">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary via-nail to-secondary rounded-full filter blur-3xl opacity-60 animate-pulse group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <img src="minh-thy.jpg" alt="Minh Thy"
+                        class="hero-img-morph w-full h-full object-cover shadow-2xl relative z-10 border-8 border-white group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 relative z-10 px-8 bg-white/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <p class="text-primary font-bold tracking-widest uppercase mb-3 text-sm italic font-serif">A Little
+                    About Me</p>
+                <h2 class="text-5xl md:text-6xl font-serif font-bold mb-6">Mảnh Ghép <span class="gradient-text">Minh
+                        Thy</span></h2>
+                <div
+                    class="w-32 h-1.5 bg-gradient-to-r from-primary via-nail to-secondary mx-auto rounded-full animate-pulse">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div
+                    class="glass p-10 rounded-[2rem] shadow-xl border border-white/50 tilt-card relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-100/50 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                    </div>
+                    <div class="relative z-10 space-y-5">
+                        <div
+                            class="w-20 h-20 bg-purple-100 text-purple-500 rounded-2xl flex items-center justify-center text-4xl shadow-inner border border-purple-200 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl group-hover:text-purple-600 transition-colors">Yêu Ca Hát</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">Âm nhạc là nơi Thy được là chính mình, tự do
+                            thể hiện cảm xúc qua từng giai điệu.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-10 rounded-[2rem] shadow-xl border border-white/50 tilt-card relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-pink-100/50 to-nail/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                    </div>
+                    <div class="relative z-10 space-y-5">
+                        <div
+                            class="w-20 h-20 bg-pink-100 text-nail rounded-2xl flex items-center justify-center text-4xl shadow-inner border border-pink-200 group-hover:rotate-12 transition-transform">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl group-hover:text-nail transition-colors">Gu Thẩm Mỹ</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">Yêu cái đẹp, thích sự tỉ mỉ, sáng tạo và luôn
+                            biết cách chăm chút cho bản thân.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-10 rounded-[2rem] shadow-xl border border-white/50 tilt-card relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                    </div>
+                    <div class="relative z-10 space-y-5">
+                        <div
+                            class="w-20 h-20 bg-blue-100 text-blue-500 rounded-2xl flex items-center justify-center text-4xl shadow-inner border border-blue-200 group-hover:rotate-12 transition-transform">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl group-hover:text-blue-600 transition-colors">IT Student</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">Đang trên hành trình khám phá công nghệ và xây
+                            dựng những giá trị mới.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-32 relative z-10 bg-dark text-white rounded-t-[5rem] mt-16 overflow-hidden px-8">
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-20 filter blur-3xl rounded-full translate-x-1/2 -translate-y-1/2 blob-2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-96 h-96 bg-secondary opacity-20 filter blur-3xl rounded-full -translate-x-1/2 translate-y-1/2 blob-1">
+        </div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-serif font-bold mb-8 italic">Say Hi to <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-nail animate-pulse">Minh
+                    Thy</span></h2>
+            <p class="text-gray-300 text-xl mb-16 max-w-2xl mx-auto font-light leading-relaxed">
+                Đừng ngần ngại kết nối với Thy nhé!
+            </p>
+
+            <div class="flex flex-wrap justify-center items-center gap-8 mb-20">
+                <a href="mailto:minhthy112233@gmail.com"
+                    class="group flex items-center gap-6 bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-all backdrop-blur-md shadow-2xl hover:scale-105 duration-300">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-2xl shadow-lg">
+                        <i class="fas fa-envelope text-white"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-medium text-white text-base">minhthy112233@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/mnhthy.04/" target="_blank"
+                    class="group flex items-center gap-6 bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-all backdrop-blur-md shadow-2xl hover:scale-105 duration-300">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-2xl shadow-lg">
+                        <i class="fab fa-facebook-f text-white"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-medium text-white text-base">Minh Thy</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/mnhthy.04/" target="_blank"
+                    class="group flex items-center gap-6 bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-all backdrop-blur-md shadow-2xl hover:scale-105 duration-300">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 flex items-center justify-center text-2xl shadow-lg">
+                        <i class="fab fa-instagram text-white"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-medium text-white text-base">@mnhthy.04</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto border-t border-white/10 pt-10 mt-16 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm font-light">
+            <p>&copy; 2026 Nguyễn Thị Minh Thy. All rights reserved.</p>
+            <p class="mt-4 md:mt-0 flex items-center gap-2">
+                Design with <i class="fas fa-heart text-primary mx-1 animate-pulse"></i>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
