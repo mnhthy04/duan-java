@@ -27,8 +27,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
-            ${{ secrets.DOCKER_USERNAME }}/springboot-app:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/duanjava:latest
+            ${{ secrets.DOCKER_USERNAME }}/duanjava:${{ github.sha }}
 
       # 4. Deploy lên DevOps Classroom
       - name: Triển khai lên DevOps Classroom
